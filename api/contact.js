@@ -38,7 +38,7 @@ export default async function handler(req, res) {
     await collection.insertOne(submission);
 
     // Email configuration
-    const transporter = nodemailer.createTransporter({
+    const transporter = nodemailer.createTransport({
       service: 'gmail',
       auth: {
         user: process.env.EMAIL_USER,
