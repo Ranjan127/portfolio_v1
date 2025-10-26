@@ -1,5 +1,6 @@
 {
   "version": 2,
+  "outputDirectory": "portfolio",
   "routes": [
     {
       "src": "/api/(.*)",
@@ -7,11 +8,11 @@
     },
     {
       "src": "/(.*)",
-      "dest": "/portfolio/$1"
+      "dest": "/$1"
     },
     {
       "src": "/",
-      "dest": "/portfolio/home.html"
+      "dest": "/home.html"
     }
   ]
 }
