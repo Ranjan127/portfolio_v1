@@ -128,7 +128,9 @@ function validateEmail(email) {
 }
 
 // Contact form submission
-document.getElementById('contactForm').addEventListener('submit', async (e) => {
+const contactForm = document.getElementById('contactForm');
+if (contactForm) {
+  contactForm.addEventListener('submit', async (e) => {
     e.preventDefault();
 
     const submitBtn = e.target.querySelector('button[type="submit"]');
@@ -167,7 +169,9 @@ document.getElementById('contactForm').addEventListener('submit', async (e) => {
         submitBtn.textContent = originalText;
         submitBtn.disabled = false;
     }
-});
+  });
+}
+
 
 // Add loading animation
 window.addEventListener('load', () => {
